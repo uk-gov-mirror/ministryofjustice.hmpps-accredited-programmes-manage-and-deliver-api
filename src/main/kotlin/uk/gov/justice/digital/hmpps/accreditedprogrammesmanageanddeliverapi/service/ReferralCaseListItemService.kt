@@ -42,6 +42,7 @@ class ReferralCaseListItemService(
     crnOrPersonName: String?,
     cohort: ProgrammeGroupCohort?,
     status: String?,
+    sex: String?,
     pdus: List<String>?,
     reportingTeams: List<String>?,
   ): CaseListReferrals {
@@ -62,6 +63,7 @@ class ReferralCaseListItemService(
       offenceCohort = offenceType,
       hasLdc = hasLdc,
       status = normalisedStatus,
+      sex = sex,
       pdus = pdus,
       reportingTeams = reportingTeams,
     )
@@ -82,6 +84,7 @@ class ReferralCaseListItemService(
       offenceCohort = offenceType,
       hasLdc = hasLdc,
       status = normalisedStatus,
+      sex = sex,
       pdus = pdus,
       reportingTeams = reportingTeams,
     ).totalElements
@@ -97,6 +100,7 @@ class ReferralCaseListItemService(
     offenceCohort: OffenceCohort?,
     hasLdc: Boolean?,
     status: String?,
+    sex: String?,
     pdus: List<String>?,
     reportingTeams: List<String>?,
   ): Page<ReferralCaseListItemViewEntity> {
@@ -109,6 +113,7 @@ class ReferralCaseListItemService(
         offenceCohort = offenceCohort,
         hasLdc = hasLdc,
         status = status,
+        sex = sex,
         pdus = pdus,
         reportingTeams = reportingTeams,
       )
